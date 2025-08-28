@@ -1,0 +1,58 @@
+
+:root {
+  --brand-gradient: radial-gradient(1200px 600px at 20% -10%, rgba(13,110,253,.25), transparent 40%),
+                    radial-gradient(1000px 500px at 100% 10%, rgba(32,201,151,.2), transparent 35%);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  background: var(--brand-gradient), var(--bs-body-bg);
+  transition: background-color .3s ease, color .3s ease;
+}
+
+.hero-bg {
+  background-image: var(--brand-gradient);
+  background-repeat: no-repeat;
+}
+
+.glass-card {
+  background: rgba(var(--bs-body-bg-rgb), .6);
+  border: 1px solid rgba(0,0,0,.06);
+  backdrop-filter: blur(8px);
+}
+
+.gradient-text {
+  background: linear-gradient(90deg, var(--bs-primary), var(--bs-success));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.btn-animated {
+  transition: transform .12s ease, box-shadow .2s ease;
+}
+.btn-animated:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 20px rgba(0,0,0,.08);
+}
+
+.page-loaded .animate-in {
+  animation: fadeInUp .6s ease both;
+}
+.page-loaded .animate-up {
+  animation: floatUp .6s ease both;
+}
+
+.toast-container { z-index: 1080; }
+
+/* Dark theme bg tweak */
+[data-bs-theme="dark"] .glass-card {
+  background: rgba(33,37,41,.6);
+  border-color: rgba(255,255,255,.06);
+}
+
+.input-group>.btn { z-index: 0; } /* keep password toggle clickable */

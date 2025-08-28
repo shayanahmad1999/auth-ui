@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en" data-bs-theme="light">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/animations.css">
+  </head>
+  <body data-page="Dashboard">
+
+<nav class="navbar navbar-expand-lg bg-body-tertiary border-bottom sticky-top animate-in">
+  <div class="container">
+    <a class="navbar-brand fw-semibold" href="dashboard.html">
+      <span class="gradient-text">Archiwiz</span> UI
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navContent" aria-controls="navContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item"><a class="nav-link" href="dashboard.html">Dashboard</a></li>
+        <li class="nav-item"><a class="nav-link" href="profile.html">Profile</a></li>
+      </ul>
+      <div class="d-flex align-items-center gap-2">
+        <div class="form-check form-switch me-1 d-none d-lg-block">
+          <input class="form-check-input" type="checkbox" role="switch" id="themeToggleSwitch">
+          <label class="form-check-label small" for="themeToggleSwitch">Dark</label>
+        </div>
+        <button id="themeToggle" class="btn btn-outline-secondary btn-sm" title="Toggle theme" aria-label="Toggle theme">
+          <i class="bi bi-moon-stars"></i>
+        </button>
+        <div class="dropdown">
+          <button class="btn btn-outline-primary btn-sm dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+            <i class="bi bi-person-circle me-1"></i>Account
+          </button>
+          <ul class="dropdown-menu dropdown-menu-end">
+            <li><a class="dropdown-item" href="profile.html"><i class="bi bi-gear me-2"></i>Settings</a></li>
+            <li><a class="dropdown-item" href="index.html"><i class="bi bi-box-arrow-right me-2"></i>Logout</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<main class="py-5 hero-bg">
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-12">
+        <div class="d-flex align-items-center justify-content-between mb-2">
+          <h1 class="h3 fw-bold mb-0">Dashboard</h1>
+          <button class="btn btn-primary btn-animated" onclick="showToast('Welcome back!','You are logged in.','success')"><i class="bi bi-bell me-2"></i>Show toast</button>
+        </div>
+        <p class="text-secondary">A simple starter dashboard with cards & recent activity.</p>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card glass-card shadow-sm animate-in">
+          <div class="card-body">
+            <div class="d-flex justify-content-between align-items-center">
+              <div>
+                <div class="text-secondary small">Users</div>
+                <div class="fs-3 fw-bold">1,248</div>
+              </div>
+              <i class="bi bi-people fs-1 opacity-50"></i>
+            </div>
+            <div class="progress mt-3" role="progressbar" aria-label="Users" aria-valuenow="72" aria-valuemin="0" aria-valuemax="100">
+              <div class="progress-bar" style="width: 72%"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card glass-card shadow-sm animate-in" style="animation-delay:.05s">
+          <div class="card-body">
+            <div class="d-flex justify-content-between align-items-center">
+              <div>
+                <div class="text-secondary small">Revenue</div>
+                <div class="fs-3 fw-bold">$8,930</div>
+              </div>
+              <i class="bi bi-cash-coin fs-1 opacity-50"></i>
+            </div>
+            <div class="progress mt-3" role="progressbar" aria-label="Revenue" aria-valuenow="54" aria-valuemin="0" aria-valuemax="100">
+              <div class="progress-bar" style="width: 54%"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card glass-card shadow-sm animate-in" style="animation-delay:.1s">
+          <div class="card-body">
+            <div class="d-flex justify-content-between align-items-center">
+              <div>
+                <div class="text-secondary small">Tickets</div>
+                <div class="fs-3 fw-bold">37</div>
+              </div>
+              <i class="bi bi-life-preserver fs-1 opacity-50"></i>
+            </div>
+            <div class="progress mt-3" role="progressbar" aria-label="Tickets" aria-valuenow="38" aria-valuemin="0" aria-valuemax="100">
+              <div class="progress-bar" style="width: 38%"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12">
+        <div class="card glass-card shadow-sm animate-in" style="animation-delay:.15s">
+          <div class="card-header bg-transparent fw-semibold">Recent Activity</div>
+          <div class="card-body">
+            <div class="list-group list-group-flush">
+              <div class="list-group-item d-flex align-items-center gap-3">
+                <i class="bi bi-check-circle text-success fs-5"></i>
+                <div>
+                  <div class="fw-semibold">New user registered</div>
+                  <div class="small text-secondary">2 minutes ago</div>
+                </div>
+              </div>
+              <div class="list-group-item d-flex align-items-center gap-3">
+                <i class="bi bi-envelope-paper text-primary fs-5"></i>
+                <div>
+                  <div class="fw-semibold">Verification email sent</div>
+                  <div class="small text-secondary">1 hour ago</div>
+                </div>
+              </div>
+              <div class="list-group-item d-flex align-items-center gap-3">
+                <i class="bi bi-sliders text-warning fs-5"></i>
+                <div>
+                  <div class="fw-semibold">Settings updated</div>
+                  <div class="small text-secondary">Yesterday</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</main>
+
+  <div class="toast-container position-fixed bottom-0 end-0 p-3" id="toastContainer"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/app.js"></script>
+  </body>
+</html>
