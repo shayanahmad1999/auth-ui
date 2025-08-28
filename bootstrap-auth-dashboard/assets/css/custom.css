@@ -1,0 +1,36 @@
+/* Custom tweaks on top of Bootstrap */
+:root {
+  --aw-radius: 1rem;
+}
+
+.card {
+  border-radius: var(--aw-radius);
+}
+
+.btn {
+  border-radius: .75rem;
+}
+
+.form-control, .form-select {
+  border-radius: .75rem;
+}
+
+.navbar-brand .badge {
+  letter-spacing: .5px;
+}
+
+.list-group-item {
+  border: 0;
+  border-bottom: 1px solid rgba(0,0,0,.05);
+}
+
+.progress {
+  height: .5rem;
+  border-radius: 1rem;
+}
+
+body {
+  background-image: radial-gradient(ellipse at 10% -10%, rgba(13,110,253,.06), transparent 35%),
+                    radial-gradient(ellipse at 110% 0%, rgba(25,135,84,.06), transparent 40%);
+  background-attachment: fixed;
+}
